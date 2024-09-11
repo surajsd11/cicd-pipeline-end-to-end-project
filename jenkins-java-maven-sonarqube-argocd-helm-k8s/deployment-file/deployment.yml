@@ -1,21 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: spring-boot-app
+  name: app
   labels:
-    app: spring-boot-app
+    app: app
 spec:
   replicas: 2
   selector:
     matchLabels:
-      app: spring-boot-app
+      app: app
   template:
     metadata:
       labels:
-        app: spring-boot-app
+        app: app
     spec:
       containers:
-      - name: spring-boot-app
+      - name: app
         image: surajsd/cicd:latest
         ports:
         - containerPort: 8080
